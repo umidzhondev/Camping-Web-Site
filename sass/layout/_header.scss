@@ -1,0 +1,59 @@
+.header {
+  border-radius: 0 0 200px 200px;
+  @include responsive(lg-desctop) {
+    border-radius: 0 0 95px 95px;
+  }
+  padding: {
+    top: 60px;
+    bottom: 250px;
+  }
+  @include responsive(phone) {
+    padding-top: 40px;
+  }
+    background: {
+    image: linear-gradient(
+        to top,
+        rgba($color-secondary, 0.4),
+        rgba($color-secondary, 0.4)
+      ),
+      url("../images/bg-image.jpg");
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  
+
+  &__text-box {
+    width: 40%;
+    @include responsive(xl-desctop) {
+      width: 50%;
+    }
+    @include responsive(desctop) {
+      width: 60%;
+    }
+    @include responsive(phone) {
+      width: 100%;
+    margin: 117px auto 0 auto;
+    }
+    margin: 250px auto 0 auto;
+    color: $color-white;
+    text-align: center;
+  }
+  &__title {
+    font-size: 80px;
+    margin-bottom: 60px;
+    @include responsive(desctop) {
+      font-size: 70px;
+    }
+    @include responsive(tab) {
+      font-size: 50px;
+    }
+    @include responsive(phone) {
+      margin-bottom: 40px;
+    }
+    
+  }
+  &__link {
+    margin-top: 30px;
+  }
+}

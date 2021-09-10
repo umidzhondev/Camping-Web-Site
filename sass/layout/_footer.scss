@@ -1,0 +1,56 @@
+.footer {
+  font-size: 16px;
+  background-color: $color-bg-2;
+  border-radius: 200px 200px 0 0;
+  @include responsive(tab) {
+    border-radius: 180px 180px 0 0;
+  }
+  @include responsive(phone) {
+      border-radius: 100px 100px 0 0 ;
+  }
+  padding-top: 100px;
+  padding-bottom: 60px;
+  @include responsive(desctop) {
+    font-size: 14px;
+  }
+  .container {
+    position: relative;
+    @include responsive(lg-desctop) {
+      padding: 0 10px;
+    }
+    @include responsive(tab) {
+      text-align: center;;
+    }
+  }
+  &__text-box {
+    width: 45%;
+    @include responsive(tab) {
+      width: 100%;
+    }
+  }
+  &__list-box {
+    width: 50%;
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @include responsive(tab) {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  &__download {
+    width: 100%;
+    .download-link {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    @include responsive(tab) {
+     text-align: center;
+     margin-top: 30px;
+    }
+  }
+  &__copy-right {
+    width: 100%;
+    text-align: center;
+  }
+}
